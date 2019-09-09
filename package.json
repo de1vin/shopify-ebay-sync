@@ -1,0 +1,9 @@
+{
+  "name": "hs-updater",
+  "version": "1.0.0",
+  "author": "Vladimir Zinchenko",
+  "license": "MIT",
+  "dependencies": {
+    "shopify-node-api": "^1.11.1"
+  }
+}
