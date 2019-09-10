@@ -4,6 +4,10 @@
   "author": "Vladimir Zinchenko",
   "license": "MIT",
   "dependencies": {
-    "shopify-node-api": "^1.11.1"
+    "bluebird": "^3.5.5",
+    "dotenv": "^8.1.0",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "shopify-api-node": "^2.23.0"
   }
 }
