@@ -1,23 +1,15 @@
 'use strict';
-const fs = require('fs');
-const path = require('path');
+
 const config = require('../config');
-const ProductsFetcher = require('../src/service/shopify/products.fetcher');
+const Services = require('../src/services');
 
-async function process() {
+(async () => {
     try {
-        const productsFetcher = new ProductsFetcher();
-        const products = await productsFetcher.fetch();
-        const productsJson = JSON.stringify(products);
-        const outputFilename = 'products.json';
-
-        if (!fs.statSync(config.shopifyOutputDir).isDirectory()) {
-            fs.mkdirSync(config.shopifyOutputDir);
-        }
-
-        fs.writeFileSync(path.resolve(config.shopifyOutputDir, outputFilename), productsJson)
+        const services = new Services(config);
+        await services.shopify.productsFetcher.fetch();
+        process.exit(0);
     } catch (e) {
-        console.log(e)
+        console.error(e);
+        process.exit(1);
     }
-}
-process();
+})();

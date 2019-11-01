@@ -5,9 +5,15 @@
   "license": "MIT",
   "dependencies": {
     "bluebird": "^3.5.5",
+    "cheerio": "^1.0.0-rc.3",
+    "deep-object-diff": "^1.1.0",
     "dotenv": "^8.1.0",
+    "ebay-node-api": "^2.7.0",
+    "html-entities": "^1.2.1",
     "lodash": "^4.17.15",
     "moment": "^2.24.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4",
     "shopify-api-node": "^2.23.0"
   }
 }
